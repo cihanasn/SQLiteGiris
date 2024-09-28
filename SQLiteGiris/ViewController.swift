@@ -14,7 +14,14 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         veritabaniKopyala()
         
-        KisilerDao().kisiEkle(kisi_adi: "Cihan", kisi_yas: 38)
+        //KisilerDao().kisiEkle(kisi_adi: "Cihan", kisi_yas: 38)
+        //KisilerDao().kisiEkle(kisi_adi: "Cihan", kisi_yas: 38)
+        //KisilerDao().kisiEkle(kisi_adi: "Mustafa", kisi_yas: 72)
+        //KisilerDao().kisiEkle(kisi_adi: "Fatma", kisi_yas: 57)
+        
+        //KisilerDao().kisiSil(kisi_id: 3)
+        
+        //KisilerDao().kisiGuncelle(kisi_id: 4, kisi_adi: "Gökhan", kisi_yas: 42)
         
         let liste = KisilerDao().tümKisilerAl()
         

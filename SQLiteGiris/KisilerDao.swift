@@ -32,6 +32,30 @@ class KisilerDao {
         db?.close()
     }
     
+    func kisiGuncelle(kisi_id:Int, kisi_adi:String, kisi_yas:Int) {
+        db?.open()
+        
+        do {
+            try db!.executeUpdate("UPDATE kisiler SET kisi_adi = ?, kisi_yas = ? WHERE kisi_id = ?", values: [kisi_adi, kisi_yas, kisi_id])
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
+    }
+    
+    func kisiSil(kisi_id:Int) {
+        db?.open()
+        
+        do {
+            try db!.executeUpdate("DELETE FROM kisiler WHERE kisi_id = ?", values: [kisi_id])
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        db?.close()
+    }
+    
     func tümKisilerAl() -> [Kisiler] {
         var liste = [Kisiler]()
         
