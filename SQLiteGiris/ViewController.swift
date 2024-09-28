@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         
         //KisilerDao().kisiGuncelle(kisi_id: 4, kisi_adi: "Gökhan", kisi_yas: 42)
         
+        let sonuc = KisilerDao().kisiKontrol(kisi_adi: "Gökhan")
+        
+        print("Sonuç : \(sonuc)")
+        
         let liste = KisilerDao().tümKisilerAl()
         
         for kisi in liste {
